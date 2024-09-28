@@ -8,8 +8,8 @@ import java.time.LocalDateTime;
     public class HistorialPaciente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "historial_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int historialId;
 
     @ManyToOne
