@@ -10,6 +10,7 @@ public class Administrativos {
 
     @Id
     @Column(name = "administrativo_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int administrativoId;
 
     @OneToOne
