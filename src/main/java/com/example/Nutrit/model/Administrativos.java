@@ -17,7 +17,7 @@ public class Administrativos {
     //Indica que administrativoId será tanto la PK como la FK
     @MapsId
     @JoinColumn(name = "administrativo_id")
-    private Usuarios usuario;  // Relación con Usuarios
+    private UsuariosEntity usuario;  // Relación con Usuarios
 
     @Column(name = "area_responsable")
     private String areaResponsable;
@@ -42,11 +42,11 @@ public class Administrativos {
         this.administrativoId = administrativoId;
     }
 
-    public Usuarios getUsuario() {
+    public UsuariosEntity getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuarios usuario) {
+    public void setUsuario(UsuariosEntity usuario) {
         this.usuario = usuario;
     }
 
@@ -86,7 +86,7 @@ public class Administrativos {
     public Administrativos() {
     }
 
-    public Administrativos(int administrativoId, Usuarios usuario, String areaResponsable, String telefono, LocalDate fechaIngreso, String perfil) {
+    public Administrativos(int administrativoId, UsuariosEntity usuario, String areaResponsable, String telefono, LocalDate fechaIngreso, String perfil) {
         this.administrativoId = administrativoId;
         this.usuario = usuario;
         this.areaResponsable = areaResponsable;

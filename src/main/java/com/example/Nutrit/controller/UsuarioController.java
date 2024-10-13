@@ -3,7 +3,7 @@ package com.example.Nutrit.controller;
 import java.util.List;
 
 import com.example.Nutrit.dao.UsuarioDao;
-import com.example.Nutrit.model.Usuarios;
+import com.example.Nutrit.model.UsuariosEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
         /*metodo para mostrar un usuario*/
 
         @RequestMapping(value="api/usuarios")
-        public List<Usuarios> getUsuarios(){
+        public List<UsuariosEntity> getUsuarios(){
 
-            List<Usuarios> user=usuarioDao.getUsuarios();
+            List<UsuariosEntity> user=usuarioDao.getUsuarios();
 
             return user;
         }
@@ -37,10 +37,12 @@ import org.springframework.web.bind.annotation.RestController;
 
         /* Registra los usuarios en la tabla*/
 
+
         @RequestMapping(value="api/usuarios", method=RequestMethod.POST)
-        public void registrarUsuario(@RequestBody Usuarios usuario){
+        public void registrarUsuario(@RequestBody UsuariosEntity usuario){
 
             usuarioDao.registrar(usuario);
         }
+
 
 }
