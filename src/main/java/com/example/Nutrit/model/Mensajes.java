@@ -14,11 +14,11 @@ import java.time.LocalDateTime;
 
     @ManyToOne
     @JoinColumn(name = "emisor_id")
-    private Usuarios emisor; // Relación con Usuarios
+    private UsuariosEntity emisor; // Relación con Usuarios
 
     @ManyToOne
     @JoinColumn(name = "receptor_id")
-    private Usuarios receptor; // Relación con Usuarios
+    private UsuariosEntity receptor; // Relación con Usuarios
 
     @Column(name = "contenido")
     private String contenido;
@@ -40,19 +40,19 @@ import java.time.LocalDateTime;
         this.mensajesId = mensajesId;
     }
 
-    public Usuarios getEmisor() {
+    public UsuariosEntity getEmisor() {
         return emisor;
     }
 
-    public void setEmisor(Usuarios emisor) {
+    public void setEmisor(UsuariosEntity emisor) {
         this.emisor = emisor;
     }
 
-    public Usuarios getReceptor() {
+    public UsuariosEntity getReceptor() {
         return receptor;
     }
 
-    public void setReceptor(Usuarios receptor) {
+    public void setReceptor(UsuariosEntity receptor) {
         this.receptor = receptor;
     }
 
@@ -85,7 +85,7 @@ import java.time.LocalDateTime;
     public Mensajes() {
     }
 
-    public Mensajes(int mensajesId, Usuarios emisor, Usuarios receptor, String contenido, LocalDateTime fechaEnvio, EstadoMensaje estado) {
+    public Mensajes(int mensajesId, UsuariosEntity emisor, UsuariosEntity receptor, String contenido, LocalDateTime fechaEnvio, EstadoMensaje estado) {
         this.mensajesId = mensajesId;
         this.emisor = emisor;
         this.receptor = receptor;

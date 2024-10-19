@@ -9,7 +9,7 @@ import jakarta.persistence.*;
     @Id
     @OneToOne
     @JoinColumn(name = "medico_id")
-    private Usuarios usuario;  // Relación con Usuarios
+    private UsuariosEntity usuario;  // Relación con Usuarios
 
     @Enumerated(EnumType.STRING)
     @Column(name = "especialidad")
@@ -29,11 +29,11 @@ import jakarta.persistence.*;
 
     // Getters y Setters
 
-    public Usuarios getUsuario() {
+    public UsuariosEntity getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuarios usuario) {
+    public void setUsuario(UsuariosEntity usuario) {
         this.usuario = usuario;
     }
 
@@ -82,7 +82,7 @@ import jakarta.persistence.*;
     public Medicos() {
     }
 
-    public Medicos(Usuarios usuario, Especialidad especialidad, String matricula, String telefono, String horarioDisponible, String descripcion) {
+    public Medicos(UsuariosEntity usuario, Especialidad especialidad, String matricula, String telefono, String horarioDisponible, String descripcion) {
         this.usuario = usuario;
         this.especialidad = especialidad;
         this.matricula = matricula;

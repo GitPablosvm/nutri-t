@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 
     @OneToOne
     @JoinColumn(name = "usuario_id")
-    private Usuarios usuario;  // Relación con Usuarios
+    private UsuariosEntity usuario;  // Relación con Usuarios
 
     @Column(name = "fecha_nacimiento")
     private LocalDate fechaNacimiento;
@@ -47,11 +47,11 @@ import java.time.LocalDateTime;
         this.pacienteId = pacienteId;
     }
 
-    public Usuarios getUsuario() {
+    public UsuariosEntity getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuarios usuario) {
+    public void setUsuario(UsuariosEntity usuario) {
         this.usuario = usuario;
     }
 
@@ -115,7 +115,7 @@ import java.time.LocalDateTime;
     public Pacientes() {
     }
 
-    public Pacientes(int pacienteId, Usuarios usuario, LocalDate fechaNacimiento, String telefono, String direccion, String historicoMedico, LocalDateTime fechaRegistro, Double pesoInicial, Double pesoObjetivo) {
+    public Pacientes(int pacienteId, UsuariosEntity usuario, LocalDate fechaNacimiento, String telefono, String direccion, String historicoMedico, LocalDateTime fechaRegistro, Double pesoInicial, Double pesoObjetivo) {
         this.pacienteId = pacienteId;
         this.usuario = usuario;
         this.fechaNacimiento = fechaNacimiento;
