@@ -1,7 +1,7 @@
 package com.example.Nutrit.dao;
 
 import java.util.List;
-import com.example.Nutrit.model.Usuarios;
+import com.example.Nutrit.model.UsuariosEntity;
 import org.springframework.stereotype.Repository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -17,7 +17,7 @@ import jakarta.transaction.Transactional;
 
     @SuppressWarnings(value = "unchecked")
     @Override
-    public List<Usuarios> getUsuarios() {
+    public List<UsuariosEntity> getUsuarios() {
 
         String query="from Usuarios";
 
@@ -25,14 +25,14 @@ import jakarta.transaction.Transactional;
     }
     @Override
     public void eliminarUsuario(Long id) {
-        Usuarios usuario = entityManager.find(Usuarios.class, id);
+        UsuariosEntity usuario = entityManager.find(UsuariosEntity.class, id);
         if (usuario != null) {
             entityManager.remove(usuario);
         }
     }
 
     @Override
-    public void registrar(Usuarios usuario) {
+    public void registrar(UsuariosEntity usuario) {
         entityManager.persist(usuario);
     }
 }
