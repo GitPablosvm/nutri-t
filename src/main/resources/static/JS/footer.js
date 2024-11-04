@@ -36,7 +36,8 @@ window.onload = function() {
                                     <i class="fas fa-user" id="formato_icono"></i>
                                     <input type="text" name="name" id="name" placeholder="Nombre" required>
                                 </div>
-                                <div class="input-field">
+                                <div class="input-field" id="emailInput">
+                                    <i class="fas fa-envelope" id="formato_icono"></i>
                                     <input type="email" name="email" id="email" placeholder="Correo" required>
                                 </div>
                             </div>
