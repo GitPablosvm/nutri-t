@@ -4,6 +4,12 @@ document.getElementById("registroForm").addEventListener("submit", async (e) => 
     const email = document.getElementById("email").value;
     const newPassword = document.getElementById("newPassword").value;
 
+    // Validación de campos
+        if (!newUsername || !email || !newPassword) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
+
     const response = await fetch("http://localhost:8080/api/auth/registro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
