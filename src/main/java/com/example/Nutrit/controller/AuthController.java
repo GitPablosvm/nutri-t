@@ -3,15 +3,15 @@ package com.example.Nutrit.controller;
 
 import com.example.Nutrit.Seguridad.RolesRepositorio;
 import com.example.Nutrit.Seguridad.UsuariosRepositorio;
-import com.example.Nutrit.model.RegistroDto;
-import com.example.Nutrit.model.Rol;
-import com.example.Nutrit.model.Roles;
-import com.example.Nutrit.model.UsuariosEntity;
+import com.example.Nutrit.model.*;
 import org.hibernate.service.spi.InjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,6 +35,14 @@ public class AuthController {
         this.usuariosRepositorio = usuariosRepositorio;
         this.rolesRepositorio = rolesRepositorio;
         this.passwordEncoder = passwordEncoder;
+    }
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginDto loginDto){
+        Authentication auntentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(loginDto.getUsername(), loginDto.getPassword()));
+        SecurityContextHolder.clearContext();
+        return new ResponseEntity<>("inicio de sesion correcto", HttpStatus.OK);
+
     }
 
     @PostMapping("/registro")
