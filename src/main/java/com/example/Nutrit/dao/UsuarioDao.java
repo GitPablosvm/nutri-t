@@ -1,12 +1,12 @@
 package com.example.Nutrit.dao;
 
-import com.example.Nutrit.model.Usuarios;
+import com.example.Nutrit.model.UsuariosEntity;
 import java.util.List;
 
 public interface UsuarioDao {
 
-    List<Usuarios> getUsuarios();
+    List<UsuariosEntity> getUsuarios();
     void eliminarUsuario(Long id);
-    void registrar(Usuarios usuario);
+    void registrar(UsuariosEntity usuario);
 
 }

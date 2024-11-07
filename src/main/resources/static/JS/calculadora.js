@@ -1,25 +1,24 @@
-// let formSubmitButton = document.getElementById("formSubmitButton")
-let nameInput = document.getElementById("nameInput");
-let title = document.getElementById("title");
+document.getElementById("imcForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-function calculateIMC(){
-    var weight = document.getElementById('weight').value;
-    var height = document.getElementById('height').value;
+    const weight = parseFloat(document.getElementById('weight').value.replace(',', '.'));
+    const height = parseFloat(document.getElementById('height').value.replace(',', '.')) / 100;
 
-    if (weight !== '' && height !== ''){
-      var bmi = weight / ((height/100)**2);
-      var result = document.getElementById('result');
-      result.innerHTML = 'Tu IMC es: ' + bmi.toFixed(2);
+    const result = document.getElementById('result');
 
-      //Clasificacion del IMC
-      if(bmi<18.5){
-        result.innerHTML += '- Bajo peso';
-      }else if (bmi<25){
-        result.innerHTML += '- Peso normal';
-      }else if(bmi <30){
-        result.innerHTML += '- Sobrepeso';
-      }else{
-        result.innerHTML += '- Obesidad';
-      }
+    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+        result.innerHTML = "Por favor, ingresa valores válidos.";
+        return;
     }
-  }
+
+    const bmi = weight / (height ** 2);
+    result.innerHTML = `Tu IMC es: ${bmi.toFixed(2)} - ${clasificarIMC(bmi)}`;
+});
+
+// Función para clasificar el IMC
+function clasificarIMC(bmi) {
+    if (bmi < 18.5) return "Bajo peso";
+    if (bmi < 25) return "Peso normal";
+    if (bmi < 30) return "Sobrepeso";
+    return "Obesidad";
+}

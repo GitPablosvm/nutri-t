@@ -13,149 +13,40 @@
     <link rel="stylesheet" href="/sss.css">
     <link rel="icon" href="img/Logoguada.ico" type="image/png"> <!-- Cambio el icono de la pagina -->
 
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora IMC</title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
 <body>
-<!-- SECCION INICIO -->
-<section id="inicio">
-    <header>
-        <div class="contenido-header">
-            <div class="logo">
-                <h1>NutriGM</h1>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li>
-                        <a href="#inicio" onclick="seleccionar()">
-                            <i class="fa-solid fa-house"></i>
-                            <span>Inicio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#platos" onclick="seleccionar()">
-                            <i class="fa-solid fa-utensils"></i>
-                            <span>Platos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#blog" onclick="seleccionar()">
-                            <i class="fa-solid fa-pen"></i>
-                            <span>Blog</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#calculadora" onclick="seleccionar()">
-                            <i class="fa-solid fa-calculator"></i>
-                            <span>Calculadora</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contacto" onclick="seleccionar()">
-                            <i class="fa-solid fa-comments"></i>
-                            <span>Contacto</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="social">
-                <a href="tel:+54 9 2616418747">
-                    <i class="fa-solid fa-phone"></i>+54 9 2616418747
-                </a>
-                <a href="https://www.instagram.com/nutri.gm/"><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-            </div>
-            <div class="nav-responsive" id="bar" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-    </header>
-
-    <!-- SECCION CALCULADORA -->
-    <div class="container-imc">
-        <h1>Calculadora IMC</h1>
-        <div id="calculator">
-            <input type="number" id="weight" placeholder="Peso (kg)">
-            <br><br>
-            <input type="number" id="height" placeholder="Altura (cm)">
-            <br><br>
-            <button onclick="calculateIMC()">Calcular IMC</button>
-            <div id="result"></div>
-        </div>
+<div class="container-imc">
+    <h1>Calculadora IMC</h1>
+    <form id="imcForm">
+        <input type="number" id="weight" placeholder="Peso (kg)" required step="any" min="1">
         <br><br>
-        <table>
-            <thead>
-            <tr>
-                <th>Rango de IMC</th>
-                <th>Estado</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Menos de 18.5</td>
-                <td>Bajo peso</td>
-            </tr>
-            <tr>
-                <td>18.5 - 24.9</td>
-                <td>Peso normal</td>
-            </tr>
-            <tr>
-                <td>25 - 29.9</td>
-                <td>Sobrepeso</td>
-            </tr>
-            <tr>
-                <td>30 o más</td>
-                <td>Obesidad</td>
-            </tr>
-            </tbody>
-        </table>
+        <input type="number" id="height" placeholder="Altura (cm)" required step="any" min="1">
         <br><br>
-    </div>
+        <button type="submit">Calcular IMC</button>
+    </form>
+    <div id="result"></div>
     <br><br>
+    <table>
+        <thead>
+        <tr>
+            <th>Rango de IMC</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td>Menos de 18.5</td><td>Bajo peso</td></tr>
+        <tr><td>18.5 - 24.9</td><td>Peso normal</td></tr>
+        <tr><td>25 - 29.9</td><td>Sobrepeso</td></tr>
+        <tr><td>30 o más</td><td>Obesidad</td></tr>
+        </tbody>
+    </table>
+</div>
 
-    <section id="contacto">
-        <div class="fila">
-            <div class="col">
-                <h1>NutriGM</h1>
-            </div>
-            <div class="col">
-                <h3>Menú</h3>
-                <a href="#inicio">Inicio</a>
-                <a href="#platos">Platos</a>
-                <a href="#blog">Blog</a>
-            </div>
-            <div class="col">
-                <h3>Equipo</h3>
-                <a href="#">Gualupe Mejias</a>
-                <a href="#">Stefano Mejias</a>
-            </div>
-            <div class="col">
-                <h3>Social Media</h3>
-                <div class="media">
-                    <i class="fa-brands fa-twitter"></i> <a href="#">Twitter</a>
-                </div>
-                <div class="media">
-                    <i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/nutri.gm/">Instagram</a>
-                </div>
-            </div>
-            <div class="col">
-                <h3>Contacto</h3>
-                <div class="input-group">
-                    <div class="input-field" id="nameInput">
-                        <i class="fas fa-user" id="formato_icono"></i>
-                        <input type="text" name="name" placeholder="Nombre" required>
-                    </div>
-                    <div class="input-field">
-                        <input type="email" name="email" placeholder="Correo" required>
-                    </div>
-                </div>
-                <div class="btn-field">
-                    <button id="formSubmitButton" type="submit">Enviar</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="script.js"></script>
-    <script src="JS/calculadora.js"></script>
+<script src="js/calculadora.js"></script>
 </body>
 </html>
