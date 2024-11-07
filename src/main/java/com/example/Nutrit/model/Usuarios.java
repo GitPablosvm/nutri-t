@@ -3,10 +3,12 @@ package com.example.Nutrit.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-    @Entity
-    @Table (name="Usuarios")
-    public class Usuarios {
 
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "Usuarios")
+
+    public abstract class Usuarios {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "usuario_id")
@@ -34,8 +36,34 @@ import java.time.LocalDateTime;
         @Column(name = "fecha_ultima_conexion")
         private LocalDateTime fecha_ultima_conexion;
 
+        public Usuarios() {
+        }
 
-        // Getters y Setters
+        public Usuarios(int usuario_id, String nombre, String apellido, String email, String contrasena, Rol rol, LocalDateTime fecha_creacion, LocalDateTime fecha_ultima_conexion) {
+            this.usuario_id = usuario_id;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.email = email;
+            this.contrasena = contrasena;
+            this.rol = rol;
+            this.fecha_creacion = fecha_creacion;
+            this.fecha_ultima_conexion = fecha_ultima_conexion;
+        }
+
+        @Override
+        public String toString() {
+            return "Usuario{" +
+                    "usuario_id=" + usuario_id +
+                    ", nombre='" + nombre + '\'' +
+                    ", apellido='" + apellido + '\'' +
+                    ", email='" + email + '\'' +
+                    ", contrasena='" + contrasena + '\'' +
+                    ", rol=" + rol +
+                    ", fecha_creacion=" + fecha_creacion +
+                    ", fecha_ultima_conexion=" + fecha_ultima_conexion +
+                    '}';
+        }
+
         public int getUsuario_id() {
             return usuario_id;
         }
@@ -100,32 +128,4 @@ import java.time.LocalDateTime;
             this.fecha_ultima_conexion = fecha_ultima_conexion;
         }
 
-        //Constructores
-        public Usuarios() {
-        }
-
-        public Usuarios(int usuario_id, String nombre, String apellido, String email, String contrasena, Rol rol, LocalDateTime fecha_creacion, LocalDateTime fecha_ultima_conexion) {
-            this.usuario_id = usuario_id;
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.email = email;
-            this.contrasena = contrasena;
-            this.rol = rol;
-            this.fecha_creacion = fecha_creacion;
-            this.fecha_ultima_conexion = fecha_ultima_conexion;
-        }
-
-        @Override
-        public String toString() {
-            return "Usuarios{" +
-                    "usuario_id=" + usuario_id +
-                    ", nombre='" + nombre + '\'' +
-                    ", apellido='" + apellido + '\'' +
-                    ", email='" + email + '\'' +
-                    ", contrasena='" + contrasena + '\'' +
-                    ", rol=" + rol +
-                    ", fecha_creacion=" + fecha_creacion +
-                    ", fecha_ultima_conexion=" + fecha_ultima_conexion +
-                    '}';
-        }
     }

@@ -1,5 +1,5 @@
 package com.example.Nutrit;
-
+/*
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,8 +17,10 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.GET, "/api/usuarios").permitAll() // Permitir acceso sin autenticación
                 .antMatchers(HttpMethod.POST, "/api/usuarios").permitAll() // Permitir registro de usuarios
                 .antMatchers(HttpMethod.DELETE, "/api/usuarios/**").permitAll() // Permitir eliminación de usuarios
-                .anyRequest().authenticated(); // Requiere autenticación para cualquier otra solicitud*/
+                .anyRequest().authenticated(); // Requiere autenticación para cualquier otra solicitud
 
         return http.build();
     }
 }
+*/
+

@@ -1,40 +1,28 @@
 package com.example.Nutrit.model;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Medicos")
-    public class Medicos {
-
-    @Id
-    @OneToOne
-    @JoinColumn(name = "medico_id")
-    private Usuarios usuario;  // Relación con Usuarios
+public class Medicos extends Usuarios {
+    @Column(name = "matricula")
+    private String matricula;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "especialidad")
     private Especialidad especialidad;
 
-    @Column(name = "matricula")
-    private String matricula;
-
     @Column(name = "telefono")
     private String telefono;
 
-    @Column(name = "horario_disponible")
-    private String horarioDisponible;
 
-    @Column(name = "descripcion")
-    private String descripcion;
-
-    // Getters y Setters
-
-    public Usuarios getUsuario() {
-        return usuario;
+    public String getMatricula() {
+        return matricula;
     }
 
-    public void setUsuario(Usuarios usuario) {
-        this.usuario = usuario;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public Especialidad getEspecialidad() {
@@ -45,14 +33,6 @@ import jakarta.persistence.*;
         this.especialidad = especialidad;
     }
 
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
     public String getTelefono() {
         return telefono;
     }
@@ -61,45 +41,25 @@ import jakarta.persistence.*;
         this.telefono = telefono;
     }
 
-    public String getHorarioDisponible() {
-        return horarioDisponible;
-    }
-
-    public void setHorarioDisponible(String horarioDisponible) {
-        this.horarioDisponible = horarioDisponible;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    // Constructores
-
-    public Medicos() {
-    }
-
-    public Medicos(Usuarios usuario, Especialidad especialidad, String matricula, String telefono, String horarioDisponible, String descripcion) {
-        this.usuario = usuario;
-        this.especialidad = especialidad;
-        this.matricula = matricula;
-        this.telefono = telefono;
-        this.horarioDisponible = horarioDisponible;
-        this.descripcion = descripcion;
-    }
-
     @Override
     public String toString() {
         return "Medicos{" +
-                "usuario=" + usuario +
+                "matricula='" + matricula + '\'' +
                 ", especialidad=" + especialidad +
-                ", matricula='" + matricula + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", horarioDisponible='" + horarioDisponible + '\'' +
-                ", descripcion='" + descripcion + '\'' +
                 '}';
+    }
+
+    public Medicos(String matricula, Especialidad especialidad, String telefono) {
+        this.matricula = matricula;
+        this.especialidad = especialidad;
+        this.telefono = telefono;
+    }
+
+    public Medicos(int usuario_id, String nombre, String apellido, String email, String contrasena, Rol rol, LocalDateTime fecha_creacion, LocalDateTime fecha_ultima_conexion, String matricula, Especialidad especialidad, String telefono) {
+        super(usuario_id, nombre, apellido, email, contrasena, rol, fecha_creacion, fecha_ultima_conexion);
+        this.matricula = matricula;
+        this.especialidad = especialidad;
+        this.telefono = telefono;
     }
 }

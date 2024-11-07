@@ -6,17 +6,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Pacientes")
-    public class Pacientes {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "paciente_id")
-    private int pacienteId;
-
-    @OneToOne
-    @JoinColumn(name = "usuario_id")
-    private Usuarios usuario;  // Relación con Usuarios
-
+public class Pacientes extends Usuarios {
     @Column(name = "fecha_nacimiento")
     private LocalDate fechaNacimiento;
 
@@ -29,31 +19,8 @@ import java.time.LocalDateTime;
     @Column(name = "historico_medico")
     private String historicoMedico;
 
-    @Column(name = "fecha_registro")
-    private LocalDateTime fechaRegistro = LocalDateTime.now();
 
-    @Column(name = "peso_inicial")
-    private Double pesoInicial;
 
-    @Column(name = "peso_objetivo")
-    private Double pesoObjetivo;
-
-    //Getter y Setter
-    public int getPacienteId() {
-        return pacienteId;
-    }
-
-    public void setPacienteId(int pacienteId) {
-        this.pacienteId = pacienteId;
-    }
-
-    public Usuarios getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuarios usuario) {
-        this.usuario = usuario;
-    }
 
     public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
@@ -87,43 +54,30 @@ import java.time.LocalDateTime;
         this.historicoMedico = historicoMedico;
     }
 
-    public LocalDateTime getFechaRegistro() {
-        return fechaRegistro;
+    @Override
+    public String toString() {
+        return "Pacientes{" +
+                "fechaNacimiento=" + fechaNacimiento +
+                ", telefono='" + telefono + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", historicoMedico='" + historicoMedico + '\'' +
+                '}';
     }
 
-    public void setFechaRegistro(LocalDateTime fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
-    }
-
-    public Double getPesoInicial() {
-        return pesoInicial;
-    }
-
-    public void setPesoInicial(Double pesoInicial) {
-        this.pesoInicial = pesoInicial;
-    }
-
-    public Double getPesoObjetivo() {
-        return pesoObjetivo;
-    }
-
-    public void setPesoObjetivo(Double pesoObjetivo) {
-        this.pesoObjetivo = pesoObjetivo;
-    }
-
-    //Constructores
-    public Pacientes() {
-    }
-
-    public Pacientes(int pacienteId, Usuarios usuario, LocalDate fechaNacimiento, String telefono, String direccion, String historicoMedico, LocalDateTime fechaRegistro, Double pesoInicial, Double pesoObjetivo) {
-        this.pacienteId = pacienteId;
-        this.usuario = usuario;
+    public Pacientes(LocalDate fechaNacimiento, String telefono, String direccion, String historicoMedico) {
         this.fechaNacimiento = fechaNacimiento;
         this.telefono = telefono;
         this.direccion = direccion;
         this.historicoMedico = historicoMedico;
-        this.fechaRegistro = fechaRegistro;
-        this.pesoInicial = pesoInicial;
-        this.pesoObjetivo = pesoObjetivo;
     }
+
+    public Pacientes(int usuario_id, String nombre, String apellido, String email, String contrasena, Rol rol, LocalDateTime fecha_creacion, LocalDateTime fecha_ultima_conexion, LocalDate fechaNacimiento, String telefono, String direccion, String historicoMedico) {
+        super(usuario_id, nombre, apellido, email, contrasena, rol, fecha_creacion, fecha_ultima_conexion);
+        this.fechaNacimiento = fechaNacimiento;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.historicoMedico = historicoMedico;
+    }
+
+
 }
