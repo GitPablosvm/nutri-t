@@ -1,30 +1,32 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriGM</title>
+    <title>NutriGM - Calculadora IMC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
           integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
           crossorigin="anonymous"
           referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="/sss.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/bodyCalculadora.css">
     <link rel="icon" href="img/Logoguada.ico" type="image/png"> <!-- Cambio el icono de la pagina -->
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calculadora IMC</title>
-        <link rel="stylesheet" href="css/estilo.css">
-    </head>
+</head>
 <body>
+<header>
+    <a href="index.html" class="logo">NutriGM</a>
+</header>
 <div class="container-imc">
     <h1>Calculadora IMC</h1>
     <form id="imcForm">
+        <label for="weight">Peso (kg):</label>
         <input type="number" id="weight" placeholder="Peso (kg)" required step="any" min="1">
         <br><br>
+        <label for="height">Altura (cm):</label>
         <input type="number" id="height" placeholder="Altura (cm)" required step="any" min="1">
         <br><br>
         <button type="submit">Calcular IMC</button>
@@ -46,7 +48,9 @@
         </tbody>
     </table>
 </div>
+<footer></footer>
 
-<script src="js/calculadora.js"></script>
+<script src="JS/footer.js"></script>
+<script src="JS/calculadora.js"></script>
 </body>
 </html>
