@@ -1,0 +1,53 @@
+/* HEADER */
+header {
+    background-color: #ffffff;
+    overflow: hidden;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header div{
+    display: flex;
+    gap: 10px;
+}
+header img {
+    width: 40px;
+    height: 40px;
+}
+header div a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: #401A36; /* Color de fondo */
+    border-radius: 30px; /* Define la curvatura del botón */
+    color: #fafafa; /* Color del texto */
+    padding: 8px 16px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse por encima */
+    transition: all 0.5s; /* Transición suave al cambiar el color */
+
+}
+header div a:hover {
+    background-color: #BF99B2;
+    color: black;
+    box-shadow: 3px 3px 0px #250e1f;
+}
+
+
+/* separador */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+.logo {
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #FF6A00; /* Color similar al de tu diseño */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.logo:hover {
+    color: #FF4500; /* Cambia el color al pasar el cursor por encima */
+}

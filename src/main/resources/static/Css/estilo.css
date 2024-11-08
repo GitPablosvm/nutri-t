@@ -20,7 +20,7 @@ html{
     width: 100%;
 }
 #inicio header .contenido-header{
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -77,6 +77,219 @@ html{
    font-size: 25px;
    color: #a8a8a8;
 }
+
+
+
+
+
+
+
+
+
+
+/* Fondo General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ff8f46;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Contenedor Principal del Login */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.login-container {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Sección Izquierda - Imagen */
+.login-left {
+    width: 50%;
+    background-color: #f4721c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-left img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Sección Derecha - Formulario */
+.login-right {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-right h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Inputs */
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.input-field input:focus {
+    border-color: #ff8f46;
+    outline: none;
+}
+
+/* Botón de Login */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff8f46;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #f4721c;
+}
+
+/* Enlace de Registro */
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #f4721c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+/* Estilo General del Formulario */
+.login-right {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Botón de Iniciar Sesión */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff8f46;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 15px;
+}
+
+.btn-login:hover {
+    background-color: #f4721c;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Carrusel */
 #inicio .carrusel{
     position: relative;
@@ -326,14 +539,14 @@ th{
 tbody tr:nth-child(even){         /*Con esta linea lo que logro es que se pinte un recuadro de por medio*/
     background-color: #ff8f46; 
 }
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box; 
-    text-decoration: none; 
-  }
 
+/* *{
+       margin: 0;
+       padding: 0;
+       font-family: Arial, Helvetica, sans-serif;
+       box-sizing: border-box;
+       text-decoration: none;
+     } */
 .container{
     width: 100%;
     height: 40vh;

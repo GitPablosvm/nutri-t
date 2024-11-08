@@ -1,6 +1,5 @@
 package com.example.Nutrit.Seguridad;
 
-import com.example.Nutrit.model.Rol;
 import com.example.Nutrit.model.Roles;
 import com.example.Nutrit.model.UsuariosEntity;
 import org.springframework.beans.factory.annotation.Autowired;

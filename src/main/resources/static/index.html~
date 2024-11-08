@@ -24,20 +24,46 @@
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio" onclick="seleccionar()"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
-                    <li><a href="#platos" onclick="seleccionar()"><i class="fa-solid fa-utensils"></i><span>Platos</span></a></li>
-                    <li><a href="#blog" onclick="seleccionar()"><i class="fa-solid fa-pen"></i><span>Blog</span></a></li>
-                    <li><a href="/calculadora.html" onclick="seleccionar()"><i class="fa-solid fa-calculator"></i><span>Calculadora</span></a></li>
-                    <li><a href="#contacto" onclick="seleccionar()"><i class="fa-solid fa-comments"></i><span>Contacto</span></a></li>
+                    <li>
+                        <a href="#inicio" onclick="seleccionar()">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#platos" onclick="seleccionar()">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Platos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog" onclick="seleccionar()">
+                            <i class="fa-solid fa-pen"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="calculadora.html" onclick="seleccionar()">  <!-- Enlace correcto a la calculadora -->
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>Calculadora</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contacto" onclick="seleccionar()">
+                            <i class="fa-solid fa-comments"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-
-            <!-- Botones de Login y Registro -->
-            <div class="auth-buttons">
-                <a href="/login.html" class="btn-login">Iniciar Sesión</a>
-                <a href="/registro.html" class="btn-register">Registrarse</a>
+            <div class="social">
+                <a href="tel:+54 9 2616418747">
+                    <i class="fa-solid fa-phone"></i>+54 9 2616418747
+                </a>
+                <a href="https://www.instagram.com/nutri.gm/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a class="right" href="iniciar.html"><i class="fas fa-user" id="formato_icon"></i> Iniciar sesión</a>
             </div>
-
             <div class="nav-responsive" id="bar" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -137,52 +163,10 @@
 </section>
 
 <!-- SECCIÓN CONTACTO Y PIE DE PÁGINA -->
-<section id="contacto">
-    <div class="fila">
-        <div class="col">
-            <h1>NutriGM</h1>
-        </div>
-        <div class="col">
-            <h3>Menú</h3>
-            <a href="#inicio">Inicio</a>
-            <a href="#platos">Platos</a>
-            <a href="#blog">Blog</a>
-        </div>
-        <div class="col">
-            <h3>Equipo</h3>
-            <a href="#">Guadalupe Mejias</a>
-            <a href="#">Stefano Mejias</a>
-        </div>
-        <div class="col">
-            <h3>Social Media</h3>
-            <div class="media">
-                <i class="fa-brands fa-twitter"></i> <a href="#">Twitter</a>
-            </div>
-            <div class="media">
-                <i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/nutri.gm/">Instagram</a>
-            </div>
-        </div>
-        <div class="col">
-            <h3>Contacto</h3>
-            <form action="index.php" name="usuarios" method="post">
-                <div class="input-group">
-                    <div class="input-field" id="nameInput">
-                        <i class="fas fa-user" id="formato_icono"></i>
-                        <input type="text" name="name" id="name" placeholder="Nombre" required>
-                    </div>
-                    <div class="input-field">
-                        <input type="email" name="email" id="email" placeholder="Correo" required>
-                    </div>
-                </div>
-                <div class="btn-field">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+<footer></footer>
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="/JS/script.js"></script>
+<script src="JS/script.js"></script>
+<script src="JS/footer.js"></script>
 </body>
 </html>

@@ -3,6 +3,8 @@ package com.example.Nutrit.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+
+
 @Entity
 @Table(name = "historial_turnos")
     public class HistorialTurnos {
