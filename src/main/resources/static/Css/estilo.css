@@ -12,6 +12,7 @@ html{
 /* SECCION I N I C I O */
 /* ***************** */
 #inicio{
+
     height: 100vh;
     display: flex;
     flex-direction: column;

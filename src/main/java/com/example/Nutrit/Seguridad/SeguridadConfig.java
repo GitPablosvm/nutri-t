@@ -1,11 +1,8 @@
 package com.example.Nutrit.Seguridad;
 
-
-import jakarta.security.auth.message.config.AuthConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -24,9 +21,9 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 public class SeguridadConfig {
 
-    private DetallesUsuarios detallesUsuarios;
+    private com.example.Nutrit.Seguridad.DetallesUsuarios detallesUsuarios;
     @Autowired
-    public SeguridadConfig(DetallesUsuarios detallesUsuarios) {
+    public SeguridadConfig(com.example.Nutrit.Seguridad.DetallesUsuarios detallesUsuarios) {
         this.detallesUsuarios = detallesUsuarios;
     }
 
@@ -58,7 +55,6 @@ public UserDetailsService users() {
         return new InMemoryUserDetailsManager(administativo);
 }
 
-
 @Bean
 public AuthenticationManager authenticationManager(
         AuthenticationConfiguration authenticationConfiguration) throws Exception{
@@ -69,5 +65,4 @@ public AuthenticationManager authenticationManager(
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
 }
-
 }

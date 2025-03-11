@@ -1,6 +1,6 @@
 package com.example.Nutrit.controller;
 
-import com.example.Nutrit.model.UsuarioDto;
+import com.example.Nutrit.dto.UsuarioDto;
 import com.example.Nutrit.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,21 +11,27 @@ import java.util.List;
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
 
-    private final UsuarioService usuarioService;
-
     @Autowired
-    public UsuarioController(UsuarioService usuarioService) {
-        this.usuarioService = usuarioService;
-    }
+    private UsuarioService usuarioService;
 
     @GetMapping
-    public List<UsuarioDto> obtenerTodos() {
-        return usuarioService.obtenerTodos();
+    public List<UsuarioDto> obtenerTodosLosUsuarios() {
+        return usuarioService.obtenerTodosLosUsuarios();
     }
 
     @GetMapping("/{id}")
-    public UsuarioDto obtenerPorId(@PathVariable Integer id) {
-        return usuarioService.obtenerPorId(id);
+    public UsuarioDto obtenerUsuarioPorId(@PathVariable Integer id) {
+        return usuarioService.obtenerUsuarioPorId(id);
+    }
+
+    @GetMapping("/pacientes")
+    public List<UsuarioDto> obtenerPacientes() {
+        return usuarioService.obtenerTodosLosPacientes();
+    }
+
+    @GetMapping("/medicos")
+    public List<UsuarioDto> obtenerMedicos() {
+        return usuarioService.obtenerTodosLosMedicos();
     }
 }
 
