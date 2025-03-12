@@ -7,7 +7,7 @@ import java.util.Optional;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-    boolean existsByNombreUsuario(String nombreUsuario); // Método que verifica si un usuario existe por nombre de usuario
+    boolean existsByNombreUsuario(String nombreUsuario);
     Optional<Usuario> findByNombreUsuario(String nombreUsuario);
 
 }

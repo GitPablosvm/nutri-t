@@ -1,7 +1,6 @@
 package com.example.Nutrit.service;
 
 import com.example.Nutrit.dto.MedicoDto;
-import com.example.Nutrit.model.Medico;
 import com.example.Nutrit.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
