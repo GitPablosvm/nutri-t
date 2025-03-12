@@ -14,7 +14,7 @@ body {
 
 }
 
-.registration-form{
+.registration-form {
     background-color: rgb(254 228 217);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -23,6 +23,7 @@ body {
     max-width: 300px;
     padding-right: 40px;
 }
+
 .registration-form h2 {
     margin-bottom: 20px;
 }
@@ -48,23 +49,27 @@ body {
     width: 108%;
     margin-top: 10px;
     margin-bottom: 20px;
-    border-radius: 3px;;
+    border-radius: 3px;
+    ;
     text-align: center;
 }
 
 .registration-form button:hover {
     background-color: #A85F2F;
 }
-.registration-form a{
+
+.registration-form a {
     background-color: #ff8f46;
     color: #ffffff;
     border: none;
     padding: 10px;
     margin-top: 10px;
-    border-radius: 3px;;
+    border-radius: 3px;
+    ;
     text-align: center;
     text-decoration: none;
 }
-.registration-form a:hover{
+
+.registration-form a:hover {
     background-color: #A85F2F;
 }

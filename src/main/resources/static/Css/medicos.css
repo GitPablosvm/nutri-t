@@ -1,0 +1,135 @@
+body {
+    background-color: #CDCFA9;
+}
+
+header {
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Sección del rectángulo */
+#info-paciente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 40vh;
+    margin-top: 20px;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+/* Estilos del rectángulo */
+.rectangulo {
+    background-color: #fee4d9;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 60%;
+    max-width: 600px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del cuadrado grande */
+.cuadro-info {
+    background-color: #fee4d9;
+    width: 90%;
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    min-height: 50vh;
+    /* Ahora ocupa más espacio vertical */
+}
+
+/* Estilos del título */
+.cuadro-info h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la lista con checkboxes */
+.lista-turnos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alineado a la izquierda */
+    gap: 15px;
+    padding-left: 20px;
+}
+
+.lista-turnos label {
+    font-size: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lista-turnos input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+
+.perfil-medico {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil-medico img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.perfil-medico h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.perfil-medico p {
+    font-size: 18px;
+}
+
+/* Estilo para los botones */
+.btn {
+    background-color: #ff8f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #ff7043;
+}
+
+.agregar-turno {
+    margin-top: 30px;
+    /* Ajusta este valor para obtener más separación */
+}
+
+/* Separar la lista de turnos del contenido superior */
+.lista-turnos {
+    margin-top: 20px;
+    /* Esto agrega un espacio arriba de la lista de turnos */
+}

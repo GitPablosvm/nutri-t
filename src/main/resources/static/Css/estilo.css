@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'Quicksand';
 }
-html{
-    scroll-behavior: smooth;  /*Desplazamiento suave entre las diferentes secciones de una pagina web*/
+
+html {
+    scroll-behavior: smooth;
+    /*Desplazamiento suave entre las diferentes secciones de una pagina web*/
 }
+
 /* ***************** */
 /* SECCION I N I C I O */
 /* ***************** */
-#inicio{
-
+#inicio {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
-#inicio header{
+
+#inicio header {
     width: 100%;
 }
-#inicio header .contenido-header{
-    max-width: 1400px;
+
+#inicio header .contenido-header {
+    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -30,37 +35,45 @@ html{
     position: relative;
 
 }
-#inicio header .contenido-header nav{
+
+#inicio header .contenido-header nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
-#inicio header .contenido-header nav ul{
+
+#inicio header .contenido-header nav ul {
     display: flex;
     list-style: none;
 }
-#inicio header .contenido-header .logo{
+
+#inicio header .contenido-header .logo {
     color: #ff8f46;
     font-size: 22px;
 }
-#inicio header .contenido-header nav ul li{
+
+#inicio header .contenido-header nav ul li {
     text-align: center;
 }
-#inicio header .contenido-header nav ul li i{
+
+#inicio header .contenido-header nav ul li i {
     display: block;
     color: #a8a8a8;
     margin-bottom: 10px;
 }
-#inicio header .contenido-header nav ul li a{
+
+#inicio header .contenido-header nav ul li a {
     display: block;
     text-decoration: none;
-    color:#a8a8a8;
+    color: #a8a8a8;
     margin: 0px 20px;
 }
-#inicio header .contenido-header nav ul li:hover i{
+
+#inicio header .contenido-header nav ul li:hover i {
     color: #ff8f46;
 }
-#inicio header .contenido-header .social a{
+
+#inicio header .contenido-header .social a {
     display: inline-block;
     background-color: #ff8f46;
     text-decoration: none;
@@ -68,271 +81,97 @@ html{
     padding: 10px 20px;
     border-radius: 30px;
 }
-#inicio header .contenido-header .social > i{
+
+#inicio header .contenido-header .social>i {
     display: inline-block;
     color: #a8a8a8;
     margin-left: 10px;
 }
-.nav-responsive{
-   display: none;
-   font-size: 25px;
-   color: #a8a8a8;
+
+.nav-responsive {
+    display: none;
+    font-size: 25px;
+    color: #a8a8a8;
 }
 
-
-
-
-
-
-
-
-
-
-/* Fondo General */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
+.auth-buttons a {
+    display: inline-block;
     background-color: #ff8f46;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header */
-header {
-    text-align: center;
-    padding: 20px 0;
-}
-
-header .logo h1 {
-    font-size: 2rem;
-    color: white;
-}
-
-/* Contenedor Principal del Login */
-.login-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.login-container {
-    display: flex;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 800px;
-    width: 100%;
-}
-
-/* Sección Izquierda - Imagen */
-.login-left {
-    width: 50%;
-    background-color: #f4721c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-left img {
-    max-width: 80%;
-    height: auto;
-}
-
-/* Sección Derecha - Formulario */
-.login-right {
-    width: 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.login-right h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Inputs */
-.input-field input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-.input-field input:focus {
-    border-color: #ff8f46;
-    outline: none;
-}
-
-/* Botón de Login */
-.btn-login {
-    width: 100%;
-    padding: 15px;
-    background-color: #ff8f46;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-login:hover {
-    background-color: #f4721c;
-}
-
-/* Enlace de Registro */
-.register-link {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.register-link a {
-    color: #f4721c;
+    /* Fondo naranja */
+    color: #fff;
+    /* Texto blanco */
+    padding: 12px 30px;
+    /* Espaciado adecuado */
+    border-radius: 30px;
+    /* Bordes redondeados */
     text-decoration: none;
-    font-weight: bold;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    font-size: 14px;
-}
-
-/* Estilo General del Formulario */
-.login-right {
-    width: 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Botón de Iniciar Sesión */
-.btn-login {
-    width: 100%;
-    padding: 15px;
-    background-color: #ff8f46;
-    color: white;
-    border: none;
-    border-radius: 25px;
+    /* Eliminar subrayado */
     font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-    margin-top: 15px;
+    /* Tamaño de la fuente */
+    text-align: center;
+    /* Alineación central */
+    transition: background-color 0.3s ease;
+    /* Efecto suave en el hover */
 }
 
-.btn-login:hover {
+.auth-buttons a:hover {
     background-color: #f4721c;
-    transform: scale(1.05);
+    /* Fondo más oscuro cuando se pasa el mouse */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.auth-buttons a:active {
+    background-color: #d85a1a;
+    /* Fondo aún más oscuro al hacer clic */
+}
 
 
 /* Carrusel */
-#inicio .carrusel{
+#inicio .carrusel {
     position: relative;
     height: 100%;
 }
-#inicio .carrusel .info{
+
+#inicio .carrusel .info {
     position: absolute;
-    
+
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 50%;
     text-align: center;
-    color:#fff;
+    color: #fff;
 }
-#inicio .carrusel .info h2{
+
+#inicio .carrusel .info h2 {
     font-size: 50px;
     margin-bottom: 20px;
     font-family: 'Dancing Script';
 }
-#inicio .carrusel .info button{
+
+#inicio .carrusel .info button {
     display: inline-block;
     margin-top: 20px;
     font-size: 20px;
-    border:none;
+    border: none;
     background-color: #ff8f46;
     color: #fff;
     padding: 7px 25px;
     border-radius: 30px;
     cursor: pointer;
 }
+
 #inicio .gallery {
     width: 100%;
     height: 100%;
 }
-  
+
 #inicio .gallery-cell {
     width: 100%;
     margin-right: 10px;
     height: 100%;
 }
-#inicio .gallery-cell img{
+
+#inicio .gallery-cell img {
     display: block;
     width: 100vw;
     height: 100vh;
@@ -342,46 +181,52 @@ header .logo h1 {
 /* ***************** */
 /* SECCION P L A T O S */
 /* ***************** */
-#platos h2{
+#platos h2 {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 30px;
 }
-#platos .fila{
+
+#platos .fila {
     max-width: 1100px;
-    margin:auto;
+    margin: auto;
     display: flex;
     justify-content: center;
 }
-#platos .fila .item{
+
+#platos .fila .item {
     width: 33%;
-    position:relative;
+    position: relative;
     overflow: hidden;
 }
-#platos .fila .item img{
+
+#platos .fila .item img {
     width: 100%;
     display: block;
 }
-#platos .fila .item p{
-    position:absolute;
+
+#platos .fila .item p {
+    position: absolute;
     width: 100%;
     bottom: -100%;
     padding: 10px;
-    background-color:#ff8f46;
+    background-color: #ff8f46;
     color: #fff;
     transition: .5s;
 }
-#platos .fila .item:hover p{
+
+#platos .fila .item:hover p {
     bottom: 0;
 }
-#platos button{
+
+#platos button {
     display: block;
     width: fit-content;
     margin: auto;
     margin-top: 20px;
     font-size: 20px;
-    border:none;
+    border: none;
     background-color: #ff8f46;
     color: #fff;
     padding: 7px 25px;
@@ -393,45 +238,52 @@ header .logo h1 {
 /* ***************** */
 /* SECCION B L O G*/
 /* ***************** */
-#blog{
+#blog {
     padding: 50px 0;
 }
-#blog h2{
+
+#blog h2 {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 30px;
 }
-.galeria-blog{
+
+.galeria-blog {
     max-width: 800px;
     margin: 50px auto;
 }
-.galeria-blog .gallery-cell .item{
+
+.galeria-blog .gallery-cell .item {
     display: flex;
     align-items: center;
     margin: 0 80px;
 }
-.galeria-blog .gallery-cell img{
+
+.galeria-blog .gallery-cell img {
     display: block;
     width: 100px;
     border-radius: 50%;
-    border: 2px solid #ff8f46   ;
+    border: 2px solid #ff8f46;
     margin-right: 30px;
 }
-.galeria-blog .gallery-cell h3{
+
+.galeria-blog .gallery-cell h3 {
     margin-bottom: 7px;
 }
-.galeria-blog .gallery-cell p{
+
+.galeria-blog .gallery-cell p {
     color: #a8a8a8;
     font-style: italic;
 }
-#blog button{
+
+#blog button {
     display: block;
     width: fit-content;
     margin: auto;
     margin-top: 20px;
     font-size: 20px;
-    border:none;
+    border: none;
     background-color: #ff8f46;
     color: #fff;
     padding: 7px 25px;
@@ -442,113 +294,141 @@ header .logo h1 {
 /* ***************** */
 /* SECCION C O N T A C TO */
 /* ***************** */
-#contacto{
+#contacto {
     background-color: #ff8f46;
     padding: 50px 0;
 }
-#contacto .fila{
+
+#contacto .fila {
     max-width: 1100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     color: #fff;
 }
-#contacto a{
+
+#contacto a {
     text-decoration: none;
-    color:#fff;
+    color: #fff;
     display: block;
     margin-bottom: 3px;
 }
-#contacto a:hover{
+
+#contacto a:hover {
     text-decoration: underline;
 }
-#contacto h3{
+
+#contacto h3 {
     margin-bottom: 12px;
 }
-#contacto .media{
+
+#contacto .media {
     display: flex;
     align-items: center;
 }
-#contacto .media i{
+
+#contacto .media i {
     display: block;
     margin-right: 10px;
 }
-#contacto input{
+
+#contacto input {
     border: none;
     padding: 10px;
     width: 100%;
     border-radius: 30px;
 }
-#contacto .enviar{
+
+#contacto .enviar {
     background-color: #f4721c;
     color: #fff;
     width: fit-content;
     margin-top: 15px;
     cursor: pointer;
 }
+
 /* ***************** */
 /* SECCION C A L C U L A D O R A */
 /* ***************** */
-.container-imc{
+.calculadora-content {
+    background-color: #CDCFA9;
+    /* Fondo solo para la calculadora */
+    margin: 0;
+    padding: 0;
+}
+
+.container-imc {
+    background-color: #fee4d9 !important;
     width: 600px;
     height: 700px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    color: rgb(11,12,12);
+    color: rgb(11, 12, 12);
     border-radius: 60px;
-    border-style:groove;
+    border-style: groove;
     border-width: 30px;
     border-color: #f4721c;
-  }
-#calculator{
-    margin-bottom:20px;
 }
-input[type="number"]{
+
+#calculator {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
     padding: 10px;
     margin-right: 10px;
     width: 150px;
     font-size: 22px;
-    border:3px solid #ff8f46;
+    border: 3px solid #ff8f46;
 }
-button{
-    padding:10px 20px;
-    background-color:#ff8f46;
+
+button {
+    padding: 10px 20px;
+    background-color: #ff8f46;
     border: none;
     cursor: pointer;
     border-radius: 10px;
     font-size: 22px;
 }
+
 #result {
     font-weight: bold;
     margin-top: 20px;
     font-size: 22px;
 }
-table{
+
+table {
     margin: 0 auto;
     border-collapse: collapse;
 }
-th, td{
+
+th,
+td {
     padding: 8px;
     border: 3px solid #ff8f46;
     font-size: 22px;
 }
-th{
+
+th {
     background-color: #ff8f46;
     color: white;
 }
-tbody tr:nth-child(even){         /*Con esta linea lo que logro es que se pinte un recuadro de por medio*/
-    background-color: #ff8f46; 
+
+tbody tr:nth-child(even) {
+    /*Con esta linea lo que logro es que se pinte un recuadro de por medio*/
+    background-color: #ff8f46;
 }
 
-/* *{
-       margin: 0;
-       padding: 0;
-       font-family: Arial, Helvetica, sans-serif;
-       box-sizing: border-box;
-       text-decoration: none;
-     } */
-.container{
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
     width: 100%;
     height: 40vh;
     display: flex;
@@ -558,9 +438,9 @@ tbody tr:nth-child(even){         /*Con esta linea lo que logro es que se pinte 
     justify-content: center;
     border-radius: 6px;
     border-width: 2px;
-    border-style : solid;
-    border-color:black ;
-    }
+    border-style: solid;
+    border-color: black;
+}
 
 .form-content {
     width: 100%;
@@ -570,38 +450,47 @@ tbody tr:nth-child(even){         /*Con esta linea lo que logro es que se pinte 
     text-align: center;
     border-radius: 25px;
 }
-#formato_icono{
-    color:#ff8f46;     /* ACA PINTO EL COLOR DEL ICONO DE NOMBRE Y APELLIDO */    
-    padding: 5px;        /*SEPARACION DE LOS ICONOS AL BORDE*/
+
+#formato_icono {
+    color: #ff8f46;
+    /* ACA PINTO EL COLOR DEL ICONO DE NOMBRE Y APELLIDO */
+    padding: 5px;
+    /*SEPARACION DE LOS ICONOS AL BORDE*/
 }
-.input-field{
-    width: 100%; /*TAMAÑO DEL CUADRO DONDE ESTA EL PLACEHOLDER */
-    background-color: white;                
+
+.input-field {
+    width: 100%;
+    /*TAMAÑO DEL CUADRO DONDE ESTA EL PLACEHOLDER */
+    background-color: white;
     margin: 10px 0;
     border-radius: 3px;
     display: flex;
     align-items: center;
     transition: max-height 5s;
     overflow: hidden;
-    
+
 }
-input{
+
+input {
     width: 100%;
-    background: transparent; 
+    background: transparent;
     border: 0;
     outline: none;
-    padding:18px 15px ;
+    padding: 18px 15px;
     color: black;
 }
+
 input::placeholder {
     color: black;
     font-size: 12px;
 }
-.btn-field{
+
+.btn-field {
     width: 100px;
     display: flex;
     justify-content: center;
 }
+
 .btn-field button {
     flex-basis: 48px;
     font-size: 14px;
@@ -612,50 +501,56 @@ input::placeholder {
     border: 0;
     outline: 0;
     transition: background 1s;
-    cursor:pointer;
+    cursor: pointer;
 }
-.input-group{
-    height: 100px;   /* Aca modifico la distancia que hay entre el boton correo y el boton enviar */
-}
+
 
 /* ***************** */
 /* SECCION RESPONSIVE */
 /* ***************** */
 
 @media screen and (max-width:1070px) {
-    #inicio header .contenido-header .social{
+    #inicio header .contenido-header .social {
         display: none;
     }
-    #inicio header .contenido-header nav{
+
+    #inicio header .contenido-header nav {
         position: static;
         transform: translateX(0);
     }
 }
+
 @media screen and (max-width:700px) {
-    #sabores .fila{
+    #sabores .fila {
         display: block;
     }
-    #platos .fila{
+
+    #platos .fila {
         display: block;
         width: 100%;
     }
-    #platos .fila .item{
+
+    #platos .fila .item {
         width: 100%;
     }
-    #inicio header .contenido-header nav{
+
+    #inicio header .contenido-header nav {
         position: initial;
         display: none;
         transform: translate(0);
     }
-    .nav-responsive{
+
+    .nav-responsive {
         display: block;
     }
-    #inicio header .contenido-header{
+
+    #inicio header .contenido-header {
         padding: 20px;
     }
-    #inicio header .contenido-header nav.responsive{
+
+    #inicio header .contenido-header nav.responsive {
         display: block;
-        position:absolute;
+        position: absolute;
         left: 0;
         top: 70px;
         width: 100%;
@@ -663,25 +558,30 @@ input::placeholder {
         background-color: #252A2E;
         z-index: 99;
     }
-    nav.responsive ul{
+
+    nav.responsive ul {
         display: block !important;
     }
-    nav.responsive ul li{
+
+    nav.responsive ul li {
         border-bottom: 1px solid #fff;
         padding: 10px 0;
     }
 
-    #contacto .fila{
+    #contacto .fila {
         display: block;
         text-align: center;
     }
-    #contacto .fila h3{
+
+    #contacto .fila h3 {
         margin: 20px 0 3px 0;
     }
-    #contacto .fila .media{
+
+    #contacto .fila .media {
         display: block;
     }
-    #contacto .fila input{
+
+    #contacto .fila input {
         width: 90%;
     }
 }

@@ -1,34 +1,49 @@
 /* HEADER */
 header {
-    background-color: #ffffff;
-    overflow: hidden;
-    padding: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px;
+    /* El segundo valor es para los lados (izquierda y derecha) */
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
 }
 
-header div{
+
+
+header div {
     display: flex;
     gap: 10px;
 }
+
 header img {
     width: 40px;
     height: 40px;
 }
+
 header div a {
     display: flex;
     align-items: center;
     text-align: center;
     text-decoration: none;
-    background-color: #401A36; /* Color de fondo */
-    border-radius: 30px; /* Define la curvatura del botón */
-    color: #fafafa; /* Color del texto */
-    padding: 8px 16px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse por encima */
-    transition: all 0.5s; /* Transición suave al cambiar el color */
+    background-color: #401A36;
+    /* Color de fondo */
+    border-radius: 30px;
+    /* Define la curvatura del botón */
+    color: #fafafa;
+    /* Color del texto */
+    padding: 8px 16px;
+    /* Espaciado interno */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse por encima */
+    transition: all 0.5s;
+    /* Transición suave al cambiar el color */
 
 }
+
 header div a:hover {
     background-color: #BF99B2;
     color: black;
@@ -41,13 +56,18 @@ header div a:hover {
     flex: 1;
     padding: 20px;
 }
+
 .logo {
-    font-size: 24px; /* Tamaño de fuente */
-    font-weight: bold; /* Negrita */
-    color: #FF6A00; /* Color similar al de tu diseño */
-    text-decoration: none; /* Quita el subrayado del enlace */
+    font-size: 2.5rem;
+    /* Puedes ajustar este valor según lo que prefieras */
+    color: #ff8f46;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
 }
 
+
 .logo:hover {
-    color: #FF4500; /* Cambia el color al pasar el cursor por encima */
+    color: #FF4500;
+    /* Cambia el color al pasar el cursor por encima */
 }

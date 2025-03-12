@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="Css/medicos.css">
+    <link rel="stylesheet" href="Css/estilo.css">
+    <link rel="stylesheet" href="Css/footer.css">
+    <link rel="icon" href="img/Logoguada.ico" type="image/png">
+</head>
+
+<body>
+<section id="inicio">
+    <header>
+        <div class="contenido-header">
+            <div class="logo">
+                <h1>NutriGM</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Perfil del Médico -->
+    <section class="perfil-medico">
+        <img src="img/nutricionista2.jpg" alt="Foto del médico" class="foto-perfil">
+    </section>
+
+    <section id="info-paciente">
+        <div class="rectangulo">
+            Nutri. Guadalupe Mejias
+        </div>
+
+        <div class="cuadro-info">
+            <h2>Listado de Turnos Asignados</h2>
+
+            <!-- Botón para marcar todos los turnos -->
+            <button class="btn" onclick="toggleAllCheckBoxes()">Marcar todos</button>
+
+            <div class="lista-turnos">
+                <label><input type="checkbox"> 16:00 - Juan Pérez - Control de peso</label>
+                <label><input type="checkbox"> 16:30 - María López - Dieta saludable</label>
+                <label><input type="checkbox"> 17:00 - Carlos Gómez - Consulta general</label>
+                <label><input type="checkbox"> 17:30 - Ana Rodríguez - Plan de nutrición</label>
+                <label><input type="checkbox"> 18:00 - Laura Sánchez - Evaluación de progreso</label>
+            </div>
+        </div>
+
+        <!-- Sección para agregar un nuevo turno -->
+        <div class="agregar-turno">
+            <button class="btn" onclick="openAddTurnoForm()">Agregar nuevo turno</button>
+        </div>
+    </section>
+</section>
+</body>
+<script src="JS/nuevoTurno.js"></script>
+
+</html>
